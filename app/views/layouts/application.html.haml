@@ -1,0 +1,22 @@
+!!! 5
+%html
+  %head>
+    %title
+      = yield(:title) || "iGot"
+    %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=utf-8"}/
+    = stylesheet_link_tag    'application'
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag params[:controller]
+    = csrf_meta_tags
+  %body
+    .topbar
+      .fill
+        .container
+          = link_to 'Project Name', root_path, {class: 'brand'}
+          %ul.nav
+            %li= link_to_unless_current 'Home', root_path
+    .container
+      .content
+        = yield
+      %footer
+        %p © Company 2011
