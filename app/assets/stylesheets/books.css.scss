@@ -5,5 +5,13 @@
 	overflow: hidden;
 	#steps {
 		overflow: hidden;
+    fieldset.step {
+      float:left;
+      width:640px;
+    }
 	}
+}
+
+.navigation_multistep {
+  margin-top: 15px;
 }

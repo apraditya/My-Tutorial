@@ -1,14 +1,9 @@
-.field
-  = f.label :title
-  .input= f.text_field :title
-.field
-  = f.label :description
-  .input= f.text_field :description
-.field
-  = f.label :price
-  .input= f.number_field :price
-.field
-  = f.label :category_id
-  .input= f.number_field :category_id
-.actions
-  = f.submit 'Save', class: 'btn primary'
+= f.text_field :title
+= f.text_field :description
+= f.number_field :price
+= f.number_field :category_id
+.navigation_multistep
+  .prev.pull-left
+    = link_to 'Cancel', :back, class: 'btn primary'
+  .next.pull-right
+    = link_to 'Next', '#', class: 'btn primary'

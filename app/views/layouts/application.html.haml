@@ -5,7 +5,7 @@
       = yield(:title) || "iGot"
     %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=utf-8"}/
     = stylesheet_link_tag    'application'
-    = stylesheet_link_tag    'bootstrap.min'
+    = stylesheet_link_tag     params[:controller]
     = javascript_include_tag params[:controller]
     = csrf_meta_tags
     = yield(:head)
