@@ -1,9 +1,9 @@
-= f.text_field :title
-= f.text_field :description
-= f.number_field :price
-= f.number_field :category_id
-.navigation_multistep
-  .prev.pull-left
-    = link_to 'Cancel', :back, class: 'btn primary'
-  .next.pull-right
-    = link_to 'Next', '#', class: 'btn primary'
+.step1
+  = f.text_field :title, class: 'multistep_required'
+  = f.text_field :description
+  = f.select(:category_id, 'Category', Category.all.collect {|c| [ c.name, c.id ] }, { include_blank: true }, {class: 'multistep_required'})
+  .navigation_multistep
+    .prev.pull-left
+      = link_to 'Cancel', :back, class: 'btn primary'
+    .next.pull-right
+      = link_to 'Next', '#', class: 'btn primary'

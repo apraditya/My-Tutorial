@@ -4,7 +4,7 @@
   .span11
     .wrapper
       #steps
-        = twitter_bootstrap_form_for @book do |f|
+        = twitter_bootstrap_form_for @book, html: {class: 'multisteps'} do |f|
           -if @book.errors.any?
             #error_explanation
               %h2= "#{pluralize(@book.errors.count, "error")} prohibited this book from being saved:"
@@ -12,8 +12,8 @@
                 - @book.errors.full_messages.each do |msg|
                   %li= msg
           %fieldset.step= render 'form_step_one',   f: f
-          %fieldset.step= render 'form_step_one',   f: f
-          %fieldset.step= render 'form_step_one',		f: f
+          %fieldset.step= render 'form_step_two',   f: f
+          %fieldset.step= render 'form_step_three',	f: f
   .span5
     %h3 Sidebar
 = link_to 'Back', books_path

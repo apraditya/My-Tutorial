@@ -1,0 +1,8 @@
+.step2
+  = f.number_field :price, class: 'multistep_required'
+  = f.number_field :print_length, class: 'multistep_required'
+  .navigation_multistep
+    .prev.pull-left
+      = link_to 'Back', '#', class: 'btn primary'
+    .next.pull-right
+      = link_to 'Next', '#', class: 'btn primary'

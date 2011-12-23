@@ -1,0 +1,9 @@
+.step3
+  = f.text_field :publisher, class: 'multistep_required'
+  = f.text_field :language
+  = f.text_field :isbn, class: 'multistep_required'
+  .navigation_multistep
+    .prev.pull-left
+      = link_to 'Back', '#', class: 'btn primary'
+  .actions
+    = f.submit
